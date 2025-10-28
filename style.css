@@ -13,9 +13,10 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh; /* wichtig für Sticky Footer */
+  font-family: Arial, sans-serif;
 }
 
-
+/*
 header {
   position: fixed;
   top: 0;
@@ -24,14 +25,22 @@ header {
   background-color: #333;
   color: white;
   display: flex;
-  align-items: center; /* vertikal zentriert */
+  align-items: center; 
   justify-content: space-between;
   padding: 0 20px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.3);
   z-index: 1000;
 }
+*/
 
-
+header {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  padding: 0 1rem;
+    background-color: #333;
+  color: white;
+}
 .title {
   font-size: 1.5em;
   font-weight: bold;
@@ -39,17 +48,17 @@ header {
   font-family: cursive;
 }
 
-.logo {
-  height: 40px;
-  object-fit: contain;
-  padding-right: 1.5em;
+img {
+  max-width: 100%;
+  height: auto;
 }
+
 
 .content {
   padding-top: 80px;
   padding-left: 1.5em;
   padding-right: 1.5em;
-  flex: 1;  /*neu*/
+  flex: 1;  
 }
 .menuelink{
   color: white;
@@ -74,8 +83,10 @@ header {
   padding-top: 20px;
   padding-right: 20px;
 }*/
+/*
 .impressum {
   display: flex;
+  
   flex-wrap: wrap;
   justify-content: center;
   gap: 40px;
@@ -84,6 +95,27 @@ header {
   border-top: 1px solid #ddd;
   font-size: 0.9em;
   color: #555;
+}
+*/
+.impressum {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 20px;
+  background-color: gainsboro;
+  border-top: 1px solid #ddd;
+  font-size: 0.9em;
+  color: #555;
+  text-align: left;
+  flex-wrap: nowrap; /* wichtig: kein Umbruch */
+}
+
+#impressum_angaben,
+#impressum_kontakt {
+  flex: 1 1 200px;   /* flexibel, aber Mindestbreite */
+  max-width: 300px; /* nicht zu groß */
+  padding-top: 10px;
 }
 
 
@@ -98,7 +130,7 @@ header {
 #impressum_kontakt{
   padding: 2px;
   padding-top: 20px;
-}*/
+}
 
 #impressum_angaben,
 #impressum_kontakt {
@@ -106,7 +138,7 @@ header {
   max-width: 300px;
   padding-top: 10px;
 }
-
+*/
 
 
 /*Hover bei Menüheader*/
@@ -120,12 +152,19 @@ header {
 .nav-container a:hover {
   text-decoration: underline;
 }
+/*
 .nav-container{
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   gap: 20px;
+}*/
+.nav-container{
+  display: flex;
+  gap: 1rem;
+  position: static; /* absolute entfernen */
+  transform: none;  /* nicht mehr nötig */
 }
 
 /*Kontaktseite*/
@@ -193,4 +232,61 @@ button {
 }
 button:hover {
   background-color: grey;
+}
+
+
+/* ---------- Responsive Design ---------- */
+
+/* Smartphones */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .title {
+    font-size: 1.2em;
+    text-align: center;
+  }
+
+  .nav-container {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 10px;
+  }
+
+  .logo {
+    height: 30px;
+    margin-top: 10px;
+  }
+
+  .container {
+    margin: 6em 1em;
+    padding: 20px;
+  }
+
+  .label {
+    width: auto; /* Labels nicht fix, damit Text umbrechen kann */
+    display: block;
+    margin-bottom: 5px;
+  }
+}
+@media (max-width: 500px) {
+  .impressum {
+    font-size: 0.8em; /* Schrift etwas kleiner */
+    gap: 20px;        /* weniger Abstand */
+  }
+}
+
+
+/* Tablets */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .title {
+    font-size: 1.3em;
+  }
+
+  .container {
+    margin: 8em 2em;
+  }
 }
