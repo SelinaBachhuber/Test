@@ -5,19 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BB's Biertrailer</title>
     <link rel="stylesheet" href="style.css">
+   
 </head>
 <body>
-
     <header>
         <div class="title">BB's Biertrailer</div>
-        <div class="nav-container">
+        <div class="dropdown">
+    <!-- Icon (z. B. ☰ oder ein Bild) -->
+    <button onclick="toggleDropdown()" class="dropbtn">☰</button>
+    <div id="myDropdown" class="dropdown-content">
+      <a href="index.html">Startseite</a>
+      <a href="kontakt.html">Kontakt</a>
+      <a href="bilder.html">Bilder</a>
+      <a href="ausstattung.html">Ausstattung</a>
+    </div>
+        <!--<div class="nav-container">
             <a style="font-weight: bold;" class="menuelink" href="index.html">Dienstleistungen</a>
             <a class="menuelink" href="kontakt.html">Kontakt</a>
             <a class="menuelink" href="bilder.html">Bilder</a>
             <a class="menuelink" href="ausstattung.html">Ausstattung</a>
         </div>
-        <!--<img src="pc.png" alt="Logo">--> 
+        <img src="pc.png" alt="Logo">--> 
     </header>
+
+
   
     <div class="content">
       <div>
@@ -102,7 +113,7 @@
   });
 </script>
 
-  
+   <script src="backend.js"></script>
   </body>
 </html>
 
