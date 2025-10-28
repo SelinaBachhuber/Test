@@ -10,12 +10,15 @@
 
     <header>
         <div class="title">BB's Biertrailer</div>
-        <div class="nav-container">
-            <a class="menuelink" href="index.html">Dienstleistungen</a>
-            <a style="font-weight: bold;" class="menuelink" href="kontakt.html">Kontakt</a>
-            <a class="menuelink" href="bilder.html">Bilder</a>
-            <a class="menuelink" href="ausstattung.html">Ausstattung</a>
-        </div>
+        <div class="dropdown">
+
+    <button onclick="toggleDropdown()" class="dropbtn">☰</button>
+    <div id="myDropdown" class="dropdown-content">
+      <a href="index.html">Startseite</a>
+      <a style="background-color: gainsboro;" href="kontakt.html">Kontakt</a>
+      <a href="bilder.html">Bilder</a>
+      <a href="ausstattung.html">Ausstattung</a>
+    </div>
         <!--<img src="pc.png" alt="Logo">--> 
     </header>
   
@@ -70,6 +73,7 @@
       </footer>
 --> 
   
+  <script src="backend.js"></script>
   </body>
 
 </html>

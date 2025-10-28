@@ -10,15 +10,49 @@
 
     <header>
         <div class="title">BB's Biertrailer</div>
-        <div class="nav-container">
-            <a style="font-weight: bold;" class="menuelink" href="index.html">Dienstleistungen</a>
-            <a class="menuelink" href="kontakt.html">Kontakt</a>
-            <a class="menuelink" href="bilder.html">Bilder</a>
-            <a style="font-weight: bold;" class="menuelink" href="ausstattung.html">Ausstattung</a>
-        </div>
+        <div class="dropdown">
+
+    <button onclick="toggleDropdown()" class="dropbtn">☰</button>
+    <div id="myDropdown" class="dropdown-content">
+      <a href="index.html">Startseite</a>
+      <a href="kontakt.html">Kontakt</a>
+      <a href="bilder.html">Bilder</a>
+      <a style="background-color: gainsboro;" href="ausstattung.html">Ausstattung</a>
+    </div>
         <!--<img src="pc.png" alt="Logo">--> 
+        
     </header>
 
+     <div class="container">
+        <h2>Ausstattung</h2>
+        
+      </div>
+
+<!--Impressum-->
+      <div class="impressum">      
+        <div id="impressum_angaben">
+            <h3>Impressum</h3>
+        <p><strong>Angaben gemäß § 5 TMG</strong></p>
+        <p>
+          BB's Biertrailer<br>
+          Inhaber: Bastian Bachhuber<br>
+          92345 Dietfurt an der Altmühl<br>
+          Deutschland
+        </p>
+        </div>
+        
+        <div id="impressum_kontakt">
+            <h3 style="color:gainsboro;">Kontakt</h3>
+            <p>
+                <strong>Kontakt:</strong><br>
+                <p></p>
+                Telefon: 015155990636<br>
+                E-Mail: bb-biertrailer@mail.de
+            </p>
+        </div>
+      </div>
+
+      <script src="backend.js"></script>
 <body>
     
 </body>
