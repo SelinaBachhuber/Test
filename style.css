@@ -38,7 +38,7 @@ header {
   justify-content: space-between; 
   align-items: center;
   padding: 0 1rem;
-    background-color: #333;
+  background-color: #333;
   color: white;
 }
 .title {
@@ -55,7 +55,7 @@ img {
 
 
 .content {
-  padding-top: 80px;
+  padding-top: 2em;
   padding-left: 1.5em;
   padding-right: 1.5em;
   flex: 1;  
@@ -161,7 +161,7 @@ img {
   gap: 20px;
 }*/
 .nav-container{
-  display: flex;
+  display:flex;
   gap: 1rem;
   position: static; /* absolute entfernen */
   transform: none;  /* nicht mehr nötig */
@@ -201,9 +201,62 @@ footer {
 }
 
 /*Dienstleistungen*/
+
+/*Auflistung vom Content*/
+.card-body {
+  padding: 20px;
+  background: #f9f9f9;       /* heller Hintergrund */
+  border-radius: 12px;
+  border: 1px solid #ddd;
+}
+
+.features {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;                 /* Abstand zwischen den Punkten */
+}
+
+.features li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.features li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.check {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgb(54, 53, 53);      
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.feature-text {
+  font-size: 1rem;
+  color: #333;
+}
+/**/
+
 /*Kontaktformular*/
 form {
-  max-width: 500px;
+  max-width: auto;
   margin: 40px auto;
   background: #fff;
   padding: 30px;
@@ -256,10 +309,6 @@ button:hover {
     margin-top: 10px;
   }
 
-  .logo {
-    height: 30px;
-    margin-top: 10px;
-  }
 
   .container {
     margin: 6em 1em;
@@ -290,3 +339,5 @@ button:hover {
     margin: 8em 2em;
   }
 }
+
+
