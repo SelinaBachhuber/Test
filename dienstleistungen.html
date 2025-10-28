@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BB's Biertrailer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="title">BB's Biertrailer</div>
+        <div class="nav-container">
+            <a style="font-weight: bold;" class="menuelink" href="dienstleistungen.html">Dienstleistungen</a>
+            <a class="menuelink" href="kontakt.html">Kontakt</a>
+        </div>
+        <img src="pc.png" alt="Logo" class="logo">
+    </header>
+  
+    <div class="content">
+        <!--Kontaktformular-->
+    <form id="contact-form">
+        <label for="email">Deine E-Mail-Adresse:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+      
+        <label for="message">Nachricht:</label><br>
+        <textarea id="message" name="message" required></textarea><br><br>
+      
+        <button type="submit">Absenden</button>
+      </form>
+    </div>
+
+
+
+
+<!--Impressum-->
+      <div class="impressum">      
+        <div id="impressum_angaben">
+            <h3>Impressum</h3>
+        <p><strong>Angaben gemäß § 5 TMG</strong></p>
+        <p>
+          BB's Biertrailer<br>
+          Inhaberin: Bastian Bachhuber<br>
+          92345 Dietfurt an der Altmühl<br>
+          Deutschland
+        </p>
+        </div>
+        
+        <div id="impressum_kontakt">
+            <h3 style="color:gainsboro;">Kontakt</h3>
+            <p>
+                <strong>Kontakt:</strong><br>
+                <p></p>
+                Telefon: 015155990636<br>
+                E-Mail: bb-biertrailer@mail.de
+            </p>
+        </div>
+      </div>
+      
+
+
+
+
+
+
+
+      <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  emailjs.init("zPjHgTjSbxPH7ddpM"); // z.B. "uXyz123ABC"
+
+  document.getElementById("contact-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    emailjs.sendForm("service_b7c60p9", "template_qjxzgr9", this)
+      .then(() => alert("Nachricht erfolgreich gesendet!"))
+      .catch(() => alert("Fehler beim Senden. Bitte erneut versuchen."));
+  });
+</script>
+
+  
+  </body>
+</html>
