@@ -120,8 +120,6 @@ header {
 
 /**/
 
-
-
 .content {
   padding: 2rem 1.5rem;
   box-sizing: border-box;
@@ -140,24 +138,21 @@ header {
   justify-content: center;
   align-items: flex-start;
   gap: 40px;
-  padding: 20px;
+  padding: 2px;
   background-color: gainsboro;
   border-top: 1px solid #ddd;
-  font-size: 0.9em;
+  font-size: 0.7em;
   color: #555;
   text-align: left;
   flex-wrap: nowrap; /* wichtig: kein Umbruch */
+  margin-top: auto;
 }
-
 #impressum_angaben,
 #impressum_kontakt {
   flex: 1 1 200px;   /* flexibel, aber Mindestbreite */
   max-width: 300px; /* nicht zu groß */
   padding-top: 10px;
 }
-
-
-
 .impressum h3 {
   margin-top: 0;
   color: #333;
@@ -399,11 +394,7 @@ button:hover {
 
 /* Smartphones */
 @media (max-width: 600px) {
-  header {
-    flex-direction: column;
-    height: auto;
-    padding: 10px;
-  }
+
 
   .title {
     font-size: 1.2em;
