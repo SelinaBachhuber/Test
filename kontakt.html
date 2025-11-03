@@ -22,7 +22,8 @@
         <!--<img src="pc.png" alt="Logo">--> 
     </header>
   
-
+    <div class="kontaktWrapper">
+<!--Kontaktdaten-->
     <div class="container">
         <h2>Kontakt</h2>
         <div class="contact-item">
@@ -35,14 +36,26 @@
           <span class="label">Handynr:</span>  015155990636
         </div>
         
-        <h4 id="technischAn">Technischer Ansprechpartner</h4>
+        <!-- <h4 id="technischAn">Technischer Ansprechpartner</h4>
         <div style="font-size: medium;" class="contact-item">
             <span  class="label">Name:</span> Selina Bachhuber
         </div>
         <div style="font-size: medium;" class="contact-item">
             <span  class="label">Email:</span> bachhuber.selina@gmail.com
-        </div>
+        </div>-->
       </div>
+
+<!--Kontaktformular-->
+    <form id="contact-form">
+      <h4>Deine Anfrage</h4>
+        <label for="email">Deine E-Mail-Adresse:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+        <label for="message">Nachricht:</label><br>
+        <textarea id="message" name="message" required></textarea><br><br>
+        <button type="submit">Absenden</button>
+      </form>
+    </div>
+
 
 <!--Impressum-->
       <div class="impressum">      

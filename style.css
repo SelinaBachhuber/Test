@@ -48,18 +48,83 @@ header {
   line-height: 1;
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-
-img {
-  max-width: 100%;
-  height: auto;
+/**/
+.bildAufzaehlung {
+  display: flex;           /* <-- dafür sorgen, dass Kinder nebeneinander liegen */
+  flex-wrap: wrap;         /* Zeilenumbruch bei Platzmangel */
+  gap: 20px;               /* Abstand zwischen Bild und Aufzählung */
+  align-items: flex-start; /* oben ausrichten */
+  justify-content: center; /* optional: zentriert die Zeile */
+  margin-bottom: 1rem;
 }
+
+/* Beide Spalten verhalten sich ähnlich */
+.box,
+.card-body {
+  flex: 1 1 320px;   /* wächst, schrumpft, Basisbreite 320px */
+  max-width: 600px;  /* verhindert zu breite Spalten auf großen Bildschirmen */
+  box-sizing: border-box;
+}
+
+/* Bild: füllt die Box, bleibt responsive */
+.box img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+/* Styling für die Aufzählung */
+.card-body {
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #e5e5e5;
+}
+
+/* Feature-Liste */
+.features {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.features li {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+/* kleine Icons/Checks */
+.check {
+  font-weight: 700;
+  color: #2a7a2a; /* optional */
+}
+
+/* RESPONSIVE: Auf kleinen Bildschirmen untereinander */
+@media (max-width: 700px) {
+  .bildAufzaehlung {
+    flex-direction: column; /* Stapeln */
+    align-items: stretch;   /* breite ausnutzen */
+  }
+
+  .box,
+  .card-body {
+    max-width: none; /* volle Breite des Containers nutzen */
+  }
+
+  .box {
+    order: 0; /* falls du Reihenfolge ändern willst, z.B. image zuerst */
+  }
+}
+
+/**/
+
 
 
 .content {
-  padding-top: 2em;
-  padding-left: 1.5em;
-  padding-right: 1.5em;
-  flex: 1;  
+  padding: 2rem 1.5rem;
+  box-sizing: border-box;
 }
 .menuelink{
   color: white;
@@ -69,35 +134,7 @@ img {
 }
 
 /*bottom*/
-/*.impressum {
-  max-width: auto;
-  margin: auto auto;
-  margin-bottom: 0px;
-  font-size: 0.9em;
-  color: #555;
-  background-color: gainsboro;
-  border-top: 1px solid #ddd;
-  flex-wrap: wrap;
-  display: flex;
-  gap: 40px;
-  padding-left: 20px;
-  padding-top: 20px;
-  padding-right: 20px;
-}*/
-/*
-.impressum {
-  display: flex;
-  
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px;
-  padding: 20px;
-  background-color: gainsboro;
-  border-top: 1px solid #ddd;
-  font-size: 0.9em;
-  color: #555;
-}
-*/
+
 .impressum {
   display: flex;
   justify-content: center;
@@ -125,22 +162,6 @@ img {
   margin-top: 0;
   color: #333;
 }
-
-/*
-#impressum_angaben,
-#impressum_kontakt{
-  padding: 2px;
-  padding-top: 20px;
-}
-
-#impressum_angaben,
-#impressum_kontakt {
-  min-width: 250px;
-  max-width: 300px;
-  padding-top: 10px;
-}
-*/
-
 
 /*Hover bei Menüheader*/
 .nav-container a {
@@ -211,14 +232,28 @@ img {
     /**/
 
 /*Kontaktseite*/
+.kontaktWrapper{
+    display: flex;
+  flex-wrap: wrap;        /* Zeilenumbruch bei kleineren Bildschirmen */
+  gap: 30px;              /* Abstand zwischen Info-Box und Formular */
+  justify-content: center;
+  align-items: flex-start; /* Oben ausrichten */
+  margin: 5em auto;
+  max-width: 1100px;      /* Gesamtbreite begrenzen */
+  padding: 0 2rem 1rem;
+  box-sizing: border-box;
+    border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
 .container {
+  flex: 1 1 400px;        /* wächst, schrumpft, Startbreite 400px */
   max-width: 500px;
-  margin: 10em auto;
+  margin: auto;
   background-color: white;
   padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   flex: 1;
+  border-right: 2px solid #ccc; /* Farbe und Dicke kannst du anpassen */
 }
 h2 {
   margin-top: 0;
@@ -243,15 +278,22 @@ footer {
   margin-top: 5em;
 }
 
-/*Dienstleistungen*/
 
-/*Auflistung vom Content*/
+/*Startseite*/
+
+/*Auflistung vom Content
 .card-body {
   padding: 20px;
-  background: #f9f9f9;       /* heller Hintergrund */
+  background: #f9f9f9;       
   border-radius: 12px;
   border: 1px solid #ddd;
-}
+  flex: 1 1 300px;          
+    max-width: 500px;          
+    background-color: #e0e0e0;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}*/
 
 .features {
   list-style: none;
@@ -298,24 +340,31 @@ footer {
 /**/
 
 /*Kontaktformular*/
-form {
-  max-width: auto;
-  margin: 40px auto;
-  background: #fff;
+
+.contact-form {
+  flex: 1 1 400px;
+  max-width: 500px;
+  background-color: #f9f9f9;
   padding: 30px;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-label {
-  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  box-sizing: border-box;
+  
 }
 input, textarea {
   width: 100%;
   padding: 10px;
-  margin-top: 5px;
+  margin-top: 3px;
   border: 1px solid #ccc;
   border-radius: 4px;
   font-family: inherit;
+   width: 20rem;
+}
+#message{
+  height: 10rem;
 }
 button {
   background-color: #333;
@@ -328,6 +377,21 @@ button {
 }
 button:hover {
   background-color: grey;
+}
+/* 📱 Responsive: Untereinander bei kleinen Bildschirmen */
+@media (max-width: 700px) {
+  .kontakt-wrapper {
+    flex-direction: column;
+    align-items: stretch;
+  }
+    .container {
+    border-right: none;
+  }
+
+  .container,
+  .kontakt-form {
+    max-width: none; /* volle Breite nutzen */
+  }
 }
 
 
@@ -352,11 +416,11 @@ button:hover {
     margin-top: 10px;
   }
 
-
+/*
   .container {
     margin: 6em 1em;
     padding: 20px;
-  }
+  }*/
 
   .label {
     width: auto; /* Labels nicht fix, damit Text umbrechen kann */
