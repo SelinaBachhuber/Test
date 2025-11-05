@@ -181,8 +181,26 @@ header {
   display:flex;
   gap: 1rem;
   position: static; /* absolute entfernen */
-  transform: none;  /* nicht mehr nötig */
+  transform: none;  
 }
+/*Social Media Icons*/
+.social-icons {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.social-icons img:hover {
+  opacity: 1;
+}
+
 
 /*Menüseite*/
     /* Icon-Button */
@@ -406,13 +424,6 @@ button:hover {
     gap: 0.5rem;
     margin-top: 10px;
   }
-
-/*
-  .container {
-    margin: 6em 1em;
-    padding: 20px;
-  }*/
-
   .label {
     width: auto; /* Labels nicht fix, damit Text umbrechen kann */
     display: block;
@@ -437,5 +448,42 @@ button:hover {
     margin: 8em 2em;
   }
 }
+/* Ausstattungsseite */
+.hintergrundAusstattung {
+  color: black;    
+}
+
+.ausstattung{
+  display: flex;
+  justify-content: center;
+  margin:5%;
+}
+.ausstattung ul {
+  list-style: none; 
+       
+}
+.ausstattung li {
+  font-size: 1.1em;
+  display: flex;
+  align-items: center;
+}
+.ausstattung i {
+  margin-right: 10px;
+  font-size: 1.5em;
+}
+#snowflake{
+  color: rgb(69, 216, 235);
+}
+#beer{
+  color: rgb(230, 188, 59);
+}
+#ballon{
+  color: rgb(240, 122, 122);
+}
+#sink{
+  color: #444;
+}
 
 
+
+/**/
