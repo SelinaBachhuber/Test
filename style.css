@@ -448,19 +448,18 @@ button:hover {
     margin: 8em 2em;
   }
 }
+
 /* Ausstattungsseite */
 .hintergrundAusstattung {
   color: black;    
 }
-
 .ausstattung{
   display: flex;
   justify-content: center;
   margin:5%;
 }
 .ausstattung ul {
-  list-style: none; 
-       
+  list-style: none;     
 }
 .ausstattung li {
   font-size: 1.1em;
@@ -483,7 +482,16 @@ button:hover {
 #sink{
   color: #444;
 }
-
-
-
 /**/
+
+/*Bilder Seite*/
+.bilderseite{
+  display: flex;
+  justify-content: center;
+  margin:5%;
+}
+.bild{
+  max-height: 5%;
+  margin-top: 2em;
+  justify-content: center;
+}
