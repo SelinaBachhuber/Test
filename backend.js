@@ -18,8 +18,6 @@
 //////////////
 
 //Kontaktformular
-
-
   emailjs.init("zPjHgTjSbxPH7ddpM"); // z.B. "uXyz123ABC"
 
   document.getElementById("contact-form").addEventListener("submit", function(e) {
