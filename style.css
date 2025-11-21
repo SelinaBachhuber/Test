@@ -42,7 +42,7 @@ header {
 /* Beide Spalten verhalten sich ähnlich */
 .box,
 .card-body {
-  flex: 1 1 320px;   /* wächst, schrumpft, Basisbreite 320px */
+  /*flex: 1 1 320px;    wächst, schrumpft, Basisbreite 320px */
   max-width: 600px;  /* verhindert zu breite Spalten auf großen Bildschirmen */
   box-sizing: border-box;
 }
@@ -458,13 +458,44 @@ button:hover {
 /**/
 
 /*Bilder Seite*/
-.bilderseite{
+
+.bilderseite {
   display: flex;
   justify-content: center;
-  margin:5%;
+  margin: 1.5% 10%;
+  background: linear-gradient(135deg, #f0f4f8, #d9e4ec); 
+  padding: 2em;
+  border-radius: 16px;
 }
+
 .bild{
   max-height: 5%;
   margin-top: 2em;
   justify-content: center;
 }
+.video {
+  display: flex;              
+  justify-content: center;    
+}
+.video video {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;          /* abgerundete Ecken */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25); /* sanfter Schatten */
+}
+.video {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  .bilderseite {
+    margin: 5%;
+    padding: 1em;
+  }
+  .video video {
+    border-radius: 8px;
+  }
+}
+
+

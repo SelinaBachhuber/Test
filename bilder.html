@@ -1,76 +1,93 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <meta name="description" content="BB’s Biertrailer – Ausschankwagen / Weizenstand / Bierstand von Bastian Bachhuber - Dietfurt an der Altmühl.">
-    <title>BB's Biertrailer</title>    <title>BB's Biertrailer</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="BB’s Biertrailer – Ausschankwagen / Weizenstand / Bierstand von Bastian Bachhuber - Dietfurt an der Altmühl.">
+  <title>BB's Biertrailer</title>
+  <title>BB's Biertrailer</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <header>
-        <div class="title">BB's Biertrailer</div>
-        <div class="dropdown">
-
-    <button onclick="toggleDropdown()" class="dropbtn">☰</button>
-    <div id="myDropdown" class="dropdown-content">
-      <a href="index.html">Startseite</a>
-      <a href="kontakt.html">Kontakt</a>
-      <!--<a style="background-color: gainsboro;" href="bilder.html">Bilder</a>-->
-      <a href="ausstattung.html">Ausstattung</a>
+  <header>
+    <div class="title">
+      <img id="weizen" src="img/weizen.png" alt="Weizen">
+      BB's Biertrailer
     </div>
-        <!--<img src="pc.png" alt="Logo">--> 
-    </header>
 
-      <div class="bilderseite">
-        <h2>Bilder</h2>
-        
-        
+    <div class="dropdown">
+
+      <button onclick="toggleDropdown()" class="dropbtn">☰</button>
+      <div id="myDropdown" class="dropdown-content">
+        <a href="index.html">Startseite</a>
+        <a href="kontakt.html">Kontakt</a>
+        <a style="background-color: gainsboro;" href="bilder.html">Gallerie</a>
+        <a href="ausstattung.html">Ausstattung</a>
       </div>
+    </div>
 
-<!--Impressum-->
-      <div class="impressum">      
-        <div id="impressum_angaben">
-            <h3>Impressum</h3>
-        <p><strong>Angaben gemäß § 5 TMG</strong></p>
-        <p>
-          BB's Biertrailer<br>
-          Inhaber: Bastian Bachhuber<br>
-          92345 Dietfurt an der Altmühl<br>
-          Deutschland
-        </p>
-        </div>
-        
-        <div id="impressum_kontakt">
-            <h3 style="color:gainsboro;">Kontakt</h3>
-            <p>
-                <strong>Kontakt:</strong><br>
-                <p></p>
-                Telefon: 015155990636<br>
-                E-Mail: bb-biertrailer@mail.de
-            </p>
-                           <div class="social-icons">
-  <a href="https://www.instagram.com/bb_biertrailer" target="_blank" aria-label="Instagram">
-    <img src="insta.png" alt="Instagram" />
-  </a>
-  <a href="https://www.facebook.com/people/BBs-BierTrailer/61578590884425/" target="_blank" aria-label="Facebook">
-    <img src="facebook.png" alt="Facebook" />
-  </a>
-</div>
-        </div>
+
+  </header>
+
+  <div class="bilderseite">
+    <div class="video">
+      <video controls autoplay>
+        <source src="img/video1.mp4" type="video/mp4">
+        Dein Browser unterstützt kein Video-Tag.
+      </video>
+    </div>
+
+
+
+
+  </div>
+
+  <!--Impressum-->
+  <div class="impressum">
+    <div id="impressum_angaben">
+      <h3>Impressum</h3>
+      <p><strong>Angaben gemäß § 5 TMG</strong></p>
+      <p>
+        BB's Biertrailer<br>
+        Inhaber: Bastian Bachhuber<br>
+        92345 Dietfurt an der Altmühl<br>
+        Deutschland
+      </p>
+    </div>
+
+    <div id="impressum_kontakt">
+      <h3 style="color:gainsboro;">Kontakt</h3>
+      <p>
+        <strong>Kontakt:</strong><br>
+      <p></p>
+      Telefon: 015155990636<br>
+      E-Mail: bb-biertrailer@mail.de
+      </p>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/bb_biertrailer" target="_blank" aria-label="Instagram">
+          <img src="img/insta.png" alt="Instagram" />
+        </a>
+        <a href="https://www.facebook.com/people/BBs-BierTrailer/61578590884425/" target="_blank" aria-label="Facebook">
+          <img src="img/facebook_icon.png" alt="Facebook" />
+        </a>
       </div>
+    </div>
+  </div>
 
-    
 
-      <script>
-  //Dropdown Menü
+
+  <script>
+    //Dropdown Menü
     function toggleDropdown() {
       document.getElementById("myDropdown").classList.toggle("show");
     }
 
     // Klick außerhalb schließt das Menü
-    window.onclick = function(event) {
+    window.onclick = function (event) {
       if (!event.target.matches('.dropbtn')) {
         let dropdowns = document.getElementsByClassName("dropdown-content");
         for (let i = 0; i < dropdowns.length; i++) {
@@ -81,8 +98,9 @@
         }
       }
     }
-//////////////
-</script>
-    
+    //////////////
+  </script>
+
 </body>
+
 </html>
